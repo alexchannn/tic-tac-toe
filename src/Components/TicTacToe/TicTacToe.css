@@ -1,0 +1,147 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0a090c;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: flex-start;
+  padding: 2vw 0 2vw 0;
+  background: #0a090c;
+  box-sizing: border-box;
+}
+
+.title {
+  margin-top: 2vw;
+  color: #f0edee;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title span {
+  color: #90ddf0;
+  padding-left: 1vw;
+}
+
+.restart-button {
+  width: clamp(120px, 40vw, 256px);
+  height: clamp(48px, 12vw, 96px);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 48px;
+  background: #07393c;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #f0edee;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  transition: background 0.2s;
+}
+.restart-button:hover,
+.restart-button:focus {
+  background: #145469;
+}
+
+.board {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  margin: 3vh auto 0 auto;
+  gap: 0;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.board > div {
+  display: flex;
+  flex: 1;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  background: #07393c;
+  border: 2px solid #0a090c;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  transition: background 0.18s;
+  min-width: 0;
+  min-height: 0;
+}
+
+.box:hover {
+  background: #0a2b2e;
+}
+
+.box img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  margin: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 900px) {
+  .board {
+    max-width: 80vw;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .board {
+    max-width: 94vw;
+    min-width: 0;
+    padding: 5vw 3vw;
+    border-radius: 12px;
+    background: #1a2326;
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 5vw, 2.4rem);
+    margin-top: 7vw;
+  }
+  .restart-button {
+    width: clamp(100px, 70vw, 200px);
+    height: clamp(40px, 14vw, 64px);
+    font-size: clamp(1rem, 4vw, 1.1rem);
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .board {
+    max-width: 99vw;
+    padding: 2vw 1vw;
+    border-radius: 7px;
+  }
+}
