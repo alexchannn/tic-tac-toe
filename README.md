@@ -63,10 +63,9 @@ tic-tac-toe/
 ---
 
 ## 🌐 Live Demo
-*(Optional)*  
-Add your deployed link here (Vercel / Netlify / GitHub Pages)
+https://alexchannn-tic-tac-toe.vercel.app
 
 ---
 
 ## 🙌 Author
-Created by **Alex**
+Created by **Alex Young Reynaldo Sanjaya**
